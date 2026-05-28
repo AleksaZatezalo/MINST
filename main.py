@@ -10,3 +10,6 @@ import torch.optim as SGD
 import numpy as np
 import matplotlib.pyploy as plt
 
+#
+x = torch.tensor([6,2], [5,2], [1,3],[6,7]).float()
+y = torch.tensor([1,5,2,5]).float()
