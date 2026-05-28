@@ -20,6 +20,8 @@ y = torch.tensor([1,5,2,5]).float()
 print("Test data initialized")
 
 class MyNeuralNet(nn.Module):
+    """Basic class that inherits from nn.Module"""
+    
     def __init__(self):
         super().__init__()
         self.Matrix1 = nn.Linear(2, 8, bias=False)
