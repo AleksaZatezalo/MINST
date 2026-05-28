@@ -20,3 +20,7 @@ Scale = torch.Tensor([0.5, 1.5, 1])
 print(Scale)
 result = Image * Scale
 print(Image)
+
+# Operations across Dimensions
+t = torch.tensor([0.5, 1, 3, 4])
+torch.mean(t), torch.std(t), torch.max(t), torch.min(t)
