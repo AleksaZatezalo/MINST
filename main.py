@@ -10,6 +10,11 @@ import torch.optim as optim
 import numpy as np
 import matplotlib.pyplot as plt
 
+# To Do:
+# 1. Implement Sequential Network
+# 2. Classify MINST Images
+# 3. Optimize Code
+
 x = torch.tensor(([6,2], [5,2], [1,3],[6,7])).float()
 y = torch.tensor([1,5,2,5]).float()
 print("Test data initialized")
