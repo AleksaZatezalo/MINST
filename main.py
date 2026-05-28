@@ -23,3 +23,6 @@ class MyNeuralNet(nn.Module):
         x = self.Matrix1(x)
         x = self.Matrix2(x)
         return x.squeeze
+
+f = MyNeuralNet()
+f(x)
