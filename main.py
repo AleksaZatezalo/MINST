@@ -19,4 +19,4 @@ print(x)
 
 # First Model
 M1 = nn.Linear(2, 8, bias=False)
-M1
+M1(x)
