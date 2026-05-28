@@ -26,3 +26,6 @@ class MyNeuralNet(nn.Module):
 
 f = MyNeuralNet()
 f(x)
+
+for par in f.parameters():
+    print(par)
