@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 x = torch.tensor(([6,2], [5,2], [1,3],[6,7])).float()
 y = torch.tensor([1,5,2,5]).float()
+print("Test data initialized")
 
 class MyNeuralNet(nn.Module):
     def __init__(self):
@@ -23,13 +24,13 @@ class MyNeuralNet(nn.Module):
         x = self.Matrix2(x)
         return x.squeeze()
 
-
 f = MyNeuralNet()
+print("Simple neural net created")
 
 optimizer = optim.SGD(f.parameters(), lr=0.001)
 loss_fn = nn.MSELoss()
 losses = []
-
+print("Optimizer created")
 
 for epoch in range(100):
     optimizer.zero_grad()
@@ -43,6 +44,7 @@ for epoch in range(100):
     
     if epoch % 10 == 0:
         print(f"Epoch {epoch:3d} | Loss: {loss_value.item():.6f}")
+print("Neural Net Trained")
 
 plt.plot(losses)
 plt.ylabel('Loss')
