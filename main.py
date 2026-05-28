@@ -24,3 +24,13 @@ M1(x)
 # Second model
 M2 = nn.Linear(8, 1, bias=False)
 M2(M1(x)).squeeze()
+
+class MyNeuralNet(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.Matrix1 = nn.Linear(2, 8, bias=False)
+        self.Matrix2 = nn.Linear(8, 1, bias=False)
+    def forward(self, x):
+        x = self.Matrix1(x)
+        x = self.Matrix2(x)
+        return x.squeeze
