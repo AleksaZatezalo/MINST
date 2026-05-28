@@ -16,3 +16,7 @@ y = torch.tensor([1,5,2,5]).float()
 
 print(x)
 print(x)
+
+# First Model
+M1 = nn.Linear(2, 8, bias=False)
+M1
