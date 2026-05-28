@@ -14,17 +14,6 @@ import matplotlib.pyplot as plt
 x = torch.tensor(([6,2], [5,2], [1,3],[6,7])).float()
 y = torch.tensor([1,5,2,5]).float()
 
-print(x)
-print(x)
-
-# First Model
-M1 = nn.Linear(2, 8, bias=False)
-M1(x)
-
-# Second model
-M2 = nn.Linear(8, 1, bias=False)
-M2(M1(x)).squeeze()
-
 class MyNeuralNet(nn.Module):
     def __init__(self):
         super().__init__()
