@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 
 x = torch.tensor(([6,2], [5,2], [1,3],[6,7])).float()
 y = torch.tensor([1,5,2,5]).float()
-print("Test data initialized")
 
 class MyNeuralNet(nn.Module):
     """Basic class that inherits from nn.Module"""
@@ -32,13 +31,12 @@ class MyNeuralNet(nn.Module):
         return x.squeeze()
 
 f = MyNeuralNet()
-print("Simple neural net created")
+print("Simple neural net init")
 
 # Setting up optimizer
 optimizer = optim.SGD(f.parameters(), lr=0.001)
 loss_fn = nn.MSELoss()
 losses = []
-print("Optimizer created")
 
 # Training Data
 for epoch in range(100):
