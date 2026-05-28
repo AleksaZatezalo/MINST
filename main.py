@@ -6,7 +6,7 @@ Date: May 2026
 
 import torch
 import torch.nn as nn
-import torch.optim as optim   # ← Correct import
+import torch.optim as optim
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -26,15 +26,13 @@ class MyNeuralNet(nn.Module):
 
 f = MyNeuralNet()
 
-optimizer = optim.SGD(f.parameters(), lr=0.001)   # ← Correct
-loss_fn = nn.MSELoss()                            # ← Correct
-
+optimizer = optim.SGD(f.parameters(), lr=0.001)
+loss_fn = nn.MSELoss()
 losses = []
 
 
 for epoch in range(100):
-    optimizer.zero_grad()                     # ← Correct way
-    
+    optimizer.zero_grad()
     output = f(x)
     loss_value = loss_fn(output, y)
     
