@@ -49,3 +49,10 @@ for epoch in range(100):
     
     if epoch % 10 == 0:
         print(f"Epoch {epoch:3d} | Loss: {loss_value.item():.6f}")
+
+# ====================== Plotting ======================
+plt.plot(losses)
+plt.ylabel('Loss')
+plt.xlabel('Epochs')
+plt.grid(True)
+plt.show()
