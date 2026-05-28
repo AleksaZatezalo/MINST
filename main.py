@@ -55,6 +55,7 @@ for epoch in range(100):
         print(f"Epoch {epoch:3d} | Loss: {loss_value.item():.6f}")
 print("Neural Net Trained")
 
+# Creating plot of loss
 plt.plot(losses)
 plt.ylabel('Loss')
 plt.xlabel('Epochs')
