@@ -21,7 +21,7 @@ print("Test data initialized")
 
 class MyNeuralNet(nn.Module):
     """Basic class that inherits from nn.Module"""
-    
+
     def __init__(self):
         super().__init__()
         self.Matrix1 = nn.Linear(2, 8, bias=False)
@@ -34,6 +34,7 @@ class MyNeuralNet(nn.Module):
 f = MyNeuralNet()
 print("Simple neural net created")
 
+# Setting up optimizer
 optimizer = optim.SGD(f.parameters(), lr=0.001)
 loss_fn = nn.MSELoss()
 losses = []
