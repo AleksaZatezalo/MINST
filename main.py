@@ -24,3 +24,5 @@ print(Image)
 # Operations across Dimensions
 t = torch.tensor([0.5, 1, 3, 4])
 torch.mean(t), torch.std(t), torch.max(t), torch.min(t)
+t = torch.arange(20, dtype=float).reshape(5,4)
+print(torch.mean(t, axis=0))
