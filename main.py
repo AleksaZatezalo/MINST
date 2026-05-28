@@ -13,3 +13,8 @@ print(t)
 # Creating a Tensor
 t = torch.arange(48).reshape(3, 4, 4)
 print(t)
+
+# Scaling
+
+Scale = torch.Tensor([0.5, 1.5, 1])
+print(Scale)
