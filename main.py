@@ -40,6 +40,7 @@ loss_fn = nn.MSELoss()
 losses = []
 print("Optimizer created")
 
+# Training Data
 for epoch in range(100):
     optimizer.zero_grad()
     output = f(x)
