@@ -26,7 +26,6 @@ class MyNeuralNet(nn.Module):
         return x.squeeze()
 
 f = MyNeuralNet()
-print("Simple neural net init")
 
 # Setting up optimizer
 optimizer = optim.SGD(f.parameters(), lr=0.001)
@@ -46,7 +45,6 @@ for epoch in range(100):
     
     if epoch % 10 == 0:
         print(f"Epoch {epoch:3d} | Loss: {loss_value.item():.6f}")
-print("Neural Net Trained")
 
 # Creating plot of loss
 plt.plot(losses)
