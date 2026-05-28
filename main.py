@@ -1,4 +1,8 @@
-
+"""
+Description: An implementation of the MINST classifcation problem in Pytorch.
+Author: Aleksa Zatezalo
+Date: May 2026
+"""
 
 import torch
 
