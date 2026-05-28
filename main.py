@@ -23,4 +23,4 @@ M1(x)
 
 # Second model
 M2 = nn.Linear(8, 1, bias=False)
-M2(M1(x))
+M2(M1(x)).squeeze()
