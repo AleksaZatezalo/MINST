@@ -18,21 +18,29 @@ class MyNeuralNet(nn.Module):
         self.Matrix2 = nn.Linear(8,1,bias=False)
         self.R = nn.ReLU()
     def forward(self, x):
-        x = self.R(self.Matrix(x))
+        x = self.R(self.Matrix1(x))
         x = self.Matrix2(x)
         return x.squeeze()
 
 def train_model(x,y,f,n_epochs=50):
-    opt = optim.SDG(f.parameters(), lr=0.001)
+    opt = optim.SGD(f.parameters(), lr=0.001)
     L = nn.MSELoss()
 
     #Train model
     losses = []
     for _ in range(n_epochs):
-        optim.zero_grad() # Flush previous eopch's gradient
+        opt.zero_grad() # Flush previous eopch's gradient
         loss_value = L(f(x), y)
         loss_value.backward() # Compute gradient
-        optim.step()
+        opt.step()
         losses.append(loss_value.item())
     return f, losses
+
+# Testing the neural network
+x = torch.tensor(([6,2], [5,2],[1,3],[7,6])).float()
+y = torch.tensor([1,5,2,5]).float()
+f = MyNeuralNet()
+
+# Train model
+f2, losses2 = train_model(x,y,f, n_epochs=5000)
 
