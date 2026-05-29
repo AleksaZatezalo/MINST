@@ -10,21 +10,6 @@ import torch.optim as optim
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Dummy Data
-x = torch.tensor(([4,6,2,-1,6,2,5],[1,6,2,-6,5,-3,5]))
-print(x)
-
-# ReLU example
-R = nn.ReLU()
-print(R(x))
-
-# Plotting
-x = torch.linspace(-3,3,100)
-y = R(x)
-plt.plot(x.numpy(), y.numpy())
-plt.grid()
-plt.show()
-
 # Neural Network
 class MyNeuralNet(nn.Module):
     def __init__(self):
@@ -50,3 +35,4 @@ def train_model(x,y,f,n_epochs=50):
         optim.step()
         losses.append(loss_value.item())
     return f, losses
+
