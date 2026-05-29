@@ -17,3 +17,10 @@ print(x)
 # ReLU example
 R = nn.ReLU()
 print(R(x))
+
+# Plotting
+x = torch.linspace(-3,3,100)
+y = R(x)
+plt.plot(x.numpy(), y.numpy())
+plt.grid()
+plt.show()
