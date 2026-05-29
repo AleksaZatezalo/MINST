@@ -11,3 +11,8 @@ import tuple as tuple
 import requests
 import gzip
 import hashlib
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.summary as summary
