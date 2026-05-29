@@ -15,11 +15,13 @@ class MyNeuralNet(nn.Module):
     def __init__(self):
         super().__init__()
         self.Matrix1 = nn.Linear(2,80)
-        self.Matrix2 = nn.Linear(80,1)
+        self.Matrix2 = nn.Linear(80,80)
+        self.Matrix3 = nn.Linear(80,1)
         self.R = nn.ReLU()
     def forward(self, x):
         x = self.R(self.Matrix1(x))
-        x = self.Matrix2(x)
+        x = self.R(self.Matrix2(x))
+        x = self.Matrix3(x)
         return x.squeeze()
 
 def train_model(x,y,f,n_epochs=50):
@@ -43,4 +45,5 @@ f = MyNeuralNet()
 
 # Train model
 f2, losses2 = train_model(x,y,f, n_epochs=5000)
+print(f2(x))
 
