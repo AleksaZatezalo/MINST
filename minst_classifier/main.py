@@ -7,7 +7,7 @@ from train import train_epoch, evaluate
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 train_loader, test_loader = get_loaders()
-model = MINSTNet.to(device)
+model = MINSTNet().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 loss_fn = nn.CrossEntropyLoss()
 
