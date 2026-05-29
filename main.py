@@ -10,8 +10,10 @@ import torch.optim as optim
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Dummy Data
 x = torch.tensor(([4,6,2,-1,6,2,5],[1,6,2,-6,5,-3,5]))
 print(x)
 
+# ReLU example
 R = nn.ReLU()
 print(R(x))
