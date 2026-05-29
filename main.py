@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 class MyNeuralNet(nn.Module):
     def __init__(self):
         super().__init__()
-        self.Matrix1 = nn.Linear(2,8,bias=False)
-        self.Matrix2 = nn.Linear(8,1,bias=False)
+        self.Matrix1 = nn.Linear(2,80,bias=False)
+        self.Matrix2 = nn.Linear(80,1,bias=False)
         self.R = nn.ReLU()
     def forward(self, x):
         x = self.R(self.Matrix1(x))
